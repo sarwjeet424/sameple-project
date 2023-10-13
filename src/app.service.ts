@@ -11,4 +11,12 @@ export class AppService {
       heartRate: 60,
     };
   }
+
+    getTest(): object {
+    try {
+      return process.env;
+    } catch (err) {
+      return err.message;
+    }
+  }
 }
