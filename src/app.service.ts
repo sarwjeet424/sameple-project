@@ -3,7 +3,11 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Welcome to the hello world!!';
+    try {
+      return process.env;
+    } catch (err) {
+      return { err: err.message };
+    }
   }
 
   getHealth(): object {
@@ -11,13 +15,5 @@ export class AppService {
       calories: 50,
       heartRate: 60,
     };
-  }
-
-  getTest(): object {
-    try {
-      return process.env;
-    } catch (err) {
-      return { err: err.message };
-    }
   }
 }
