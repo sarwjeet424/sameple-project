@@ -14,4 +14,9 @@ export class AppController {
   getHealth(): object {
     return this.appService.getHealth();
   }
+
+  @Get('/test')
+  getTest(): object {
+    return this.appService.getTest();
+  }
 }
