@@ -13,7 +13,7 @@ export class AppService {
   getHealth(): object {
     return {
       success: true,
-      heartRate: 60,
+      heartbeat: 60,
     };
   }
 }
