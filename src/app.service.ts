@@ -12,7 +12,7 @@ export class AppService {
 
   getHealth(): object {
     return {
-      calories: 50,
+      success: true,
       heartRate: 60,
     };
   }
